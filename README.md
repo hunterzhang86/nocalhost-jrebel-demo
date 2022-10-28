@@ -1,6 +1,6 @@
 本仓库作为 nocalhost + jrebel 的示例仓库，用于演示在 k8s 场景下使用 nocalhost + jrebel 进行 Java 开发，这样本地修改完代码后，会实时在 k8s 集群容器上生效，真正享受到云原生带给我们的快感。
 
-## 准备工作
+## 配置步骤
 **1. VSCode 安装 nocalhost 插件**
 - [nocalhost 插件地址](https://marketplace.visualstudio.com/items?itemName=nocalhost.nocalhost)
 
