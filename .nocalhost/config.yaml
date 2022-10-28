@@ -1,8 +1,8 @@
-  name: "spring-boot-demo"
+  name: "nocalhost-jrebel-demo"
   serviceType: "deployment"
   containers: 
     - 
-      name: "spring-boot-demo"
+      name: "nocalhost-jrebel-demo"
       dev: 
         gitUrl: ""
         image: "nocalhost-docker.pkg.coding.net/nocalhost/dev-images/java:11"
