@@ -1,0 +1,33 @@
+  name: "spring-boot-demo"
+  serviceType: "deployment"
+  containers: 
+    - 
+      name: "spring-boot-demo"
+      dev: 
+        gitUrl: ""
+        image: "nocalhost-docker.pkg.coding.net/nocalhost/dev-images/java:11"
+        shell: "sh"
+        workDir: ""
+        storageClass: ""
+        resources: null
+        persistentVolumeDirs: []
+        command:
+          debug:
+            - java
+            - -jar
+            - -agentpath:/home/nocalhost-dev/jrebel/lib/libjrebel64.so -Drebel.remoting_plugin=true -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005
+            - /home/nocalhost-dev/target/demo-0.0.1-SNAPSHOT.jar
+          run:
+            - java
+            - -jar
+            - -agentpath:/home/nocalhost-dev/jrebel/lib/libjrebel64.so -Drebel.remoting_plugin=true
+            - /home/nocalhost-dev/target/demo-0.0.1-SNAPSHOT.jar
+        debug:
+          language: "java"
+          remoteDebugPort: 5005
+        hotReload: false
+        sync:
+          type: "sendReceive"
+          mode: "gitIgnore"
+        env: []
+        portForward: []
