@@ -28,6 +28,5 @@
         hotReload: false
         sync:
           type: "sendReceive"
-          mode: "gitIgnore"
         env: []
         portForward: []

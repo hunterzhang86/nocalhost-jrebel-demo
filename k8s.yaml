@@ -1,0 +1,38 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: nocalhost-jrebel-demo
+  namespace: nocalhost-test
+  labels:
+    app: nocalhost-jrebel-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nocalhost-jrebel-demo
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: nocalhost-jrebel-demo
+    spec:
+      volumes:
+        - name: host-time
+          hostPath:
+            path: /etc/localtime
+            type: ""
+      containers:
+        - name: nocalhost-jrebel-demo
+          image: example.com/demo/nocalhost-jrebel-demo:v0.0.1
+          ports:
+            - name: tcp-8080
+              containerPort: 8080
+              protocol: TCP
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: dev
+          resources: {}
+          volumeMounts:
+            - name: host-time
+              readOnly: true
+              mountPath: /etc/localtime
