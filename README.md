@@ -19,13 +19,13 @@
 
 **4. 将应用镜像推送到集群**
 
-执行 [docker.sh](docker.sh) 将镜像推送到集群
+执行 [docker.sh](docker.sh) 将镜像推送到集群，请按照注释调整参数。
 
 ![](push-image.png)
 
 **5. 部署应用镜像**
 
-在集群使用 [k8s.yaml](k8s.yaml) 部署应用，主要
+在集群使用 [k8s.yaml](k8s.yaml) 部署应用，请按照注释调整参数。
 
 **6. nocalhost 连接应用**
 
