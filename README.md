@@ -25,7 +25,7 @@
 
 **5. 部署应用镜像**
 
-在集群使用 [k8s.yaml](k8s.yaml) 部署应用
+在集群使用 [k8s.yaml](k8s.yaml) 部署应用，主要
 
 **6. nocalhost 连接应用**
 

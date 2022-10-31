@@ -1,28 +1,36 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
+  # 一般为应用名称
   name: nocalhost-jrebel-demo
+  # 对应部署到的命名空间
   namespace: nocalhost-test
   labels:
+    # 一般为应用名称
     app: nocalhost-jrebel-demo
 spec:
   replicas: 1
   selector:
     matchLabels:
+      # 一般为应用名称
       app: nocalhost-jrebel-demo
   template:
     metadata:
       labels:
+        # 一般为应用名称
         app: nocalhost-jrebel-demo
     spec:
       volumes:
+        # 配置容器和虚拟机的时区保持一致
         - name: host-time
           hostPath:
             path: /etc/localtime
             type: ""
       containers:
+        # 按照实际情况修改容器配置
         - name: nocalhost-jrebel-demo
           image: example.com/demo/nocalhost-jrebel-demo:v0.0.1
+          # 配置端口映射
           ports:
             - name: tcp-8080
               containerPort: 8080
@@ -32,6 +40,7 @@ spec:
               value: dev
           resources: {}
           volumeMounts:
+            # 配置容器和虚拟机的时区保持一致
             - name: host-time
               readOnly: true
               mountPath: /etc/localtime
