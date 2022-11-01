@@ -29,7 +29,7 @@ spec:
       containers:
         # 按照实际情况修改容器配置
         - name: nocalhost-jrebel-demo
-          image: example.com/demo/nocalhost-jrebel-demo:v0.0.1
+          image: example.com/demo/nocalhost-jrebel-demo:latest
           # 配置端口映射
           ports:
             - name: tcp-8080

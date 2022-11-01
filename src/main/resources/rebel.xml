@@ -9,7 +9,7 @@
 	<id>com.example.demo</id>
 
 	<classpath>
-		<dir name="/Users/zhanghuan/IdeaProjects/demo/target/classes">
+		<dir name="/Users/zhanghuan/IdeaProjects/nocalhost-jrebel-demo/target/classes">
 		</dir>
 	</classpath>
 
