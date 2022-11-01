@@ -1,5 +1,18 @@
 > 本仓库作为 nocalhost + jrebel 的示例仓库，用于演示在 k8s 场景下使用 nocalhost + jrebel 进行 Java 开发，这样本地修改完代码后，会实时在 k8s 集群容器上生效，真正享受到云原生带给我们的快感。
 
+## 插件介绍
+### Nocalhost
+[Nocalhost](https://nocalhost.dev/zh-CN/docs/introduction) 是一款开源的基于 IDE 的云原生应用开发工具：
+
+- 直接在 Kubernetes 集群中构建、测试和调试应用程序
+- 提供易于使用的 IDE 插件（支持 VS Code 和 JetBrains），即使在 Kubernetes 集群中进行开发和调试，Nocalhost 也能保持和本地开发一样的开发体验
+- 使用即时文件同步进行开发： 即时将您的代码更改同步到远端容器，而无需重建镜像或重新启动容器。
+
+### JRebel
+[JRebel](https://jrebel.com/) 是一款 Java 热部署工具，可以实现代码修改后，无需重启应用，即可生效。
+
+![jrebel.png](images/jrebel.png)
+
 ## 配置步骤
 **1. VSCode 安装 nocalhost 插件**
 
