@@ -135,7 +135,7 @@ docker push YOUR-REGISTRY/nocalhost-jrebel-demo:v0.0.1
 - 博客：[https://www.ifb.me](https://www.ifb.me)
 - 微信公众号：Tech Playground
 
-![公众号二维码](https://blog.fflow.link/images/qrcode.jpeg)
+![公众号二维码](https://www.ifb.me/_next/image?url=%2Fstatic%2Fimages%2Fqrcode.png&w=640&q=75)
 
 ## 🤝 贡献
 
